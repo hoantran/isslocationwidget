@@ -1,0 +1,562 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3BB2847E259978B9004FEDDA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BB2847D259978B9004FEDDA /* AppDelegate.m */; };
+		3BB28481259978B9004FEDDA /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BB28480259978B9004FEDDA /* SceneDelegate.m */; };
+		3BB28489259978BB004FEDDA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BB28488259978BB004FEDDA /* Assets.xcassets */; };
+		3BB2848C259978BB004FEDDA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3BB2848A259978BB004FEDDA /* LaunchScreen.storyboard */; };
+		3BB2848F259978BB004FEDDA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BB2848E259978BB004FEDDA /* main.m */; };
+		3BB2849D25997944004FEDDA /* MainVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BB2849C25997944004FEDDA /* MainVC.m */; };
+		3BB284A7259B1F7E004FEDDA /* RestService.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BB284A5259B1F7E004FEDDA /* RestService.m */; };
+		3BB284AB259B2061004FEDDA /* ISSLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BB284AA259B2061004FEDDA /* ISSLocation.m */; };
+		3BB284AF259B22C6004FEDDA /* ISSLocationFetchService.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BB284AE259B22C6004FEDDA /* ISSLocationFetchService.m */; };
+		3BB284B3259B2DEE004FEDDA /* BaseObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BB284B2259B2DEE004FEDDA /* BaseObject.m */; };
+		3BB284C5259B676C004FEDDA /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BB284C4259B676C004FEDDA /* WidgetKit.framework */; };
+		3BB284C7259B676C004FEDDA /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BB284C6259B676C004FEDDA /* SwiftUI.framework */; };
+		3BB284CA259B676C004FEDDA /* ISSLocationWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB284C9259B676C004FEDDA /* ISSLocationWidget.swift */; };
+		3BB284CD259B676F004FEDDA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BB284CC259B676F004FEDDA /* Assets.xcassets */; };
+		3BB284CF259B676F004FEDDA /* ISSLocationWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 3BB284CB259B676C004FEDDA /* ISSLocationWidget.intentdefinition */; };
+		3BB284D0259B676F004FEDDA /* ISSLocationWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 3BB284CB259B676C004FEDDA /* ISSLocationWidget.intentdefinition */; };
+		3BB284D3259B676F004FEDDA /* ISSLocationWidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 3BB284C2259B676C004FEDDA /* ISSLocationWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3BB284D1259B676F004FEDDA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3BB28471259978B8004FEDDA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3BB284C1259B676C004FEDDA;
+			remoteInfo = ISSLocationWidgetExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		3BB284D7259B676F004FEDDA /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				3BB284D3259B676F004FEDDA /* ISSLocationWidgetExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		3BB28479259978B8004FEDDA /* ISSLocation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ISSLocation.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3BB2847C259978B9004FEDDA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		3BB2847D259978B9004FEDDA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		3BB2847F259978B9004FEDDA /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
+		3BB28480259978B9004FEDDA /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
+		3BB28488259978BB004FEDDA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3BB2848B259978BB004FEDDA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3BB2848D259978BB004FEDDA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3BB2848E259978BB004FEDDA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3BB2849B25997944004FEDDA /* MainVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainVC.h; sourceTree = "<group>"; };
+		3BB2849C25997944004FEDDA /* MainVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainVC.m; sourceTree = "<group>"; };
+		3BB284A5259B1F7E004FEDDA /* RestService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RestService.m; sourceTree = "<group>"; };
+		3BB284A6259B1F7E004FEDDA /* RestService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RestService.h; sourceTree = "<group>"; };
+		3BB284A9259B2061004FEDDA /* ISSLocation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ISSLocation.h; sourceTree = "<group>"; };
+		3BB284AA259B2061004FEDDA /* ISSLocation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ISSLocation.m; sourceTree = "<group>"; };
+		3BB284AD259B22C6004FEDDA /* ISSLocationFetchService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ISSLocationFetchService.h; sourceTree = "<group>"; };
+		3BB284AE259B22C6004FEDDA /* ISSLocationFetchService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ISSLocationFetchService.m; sourceTree = "<group>"; };
+		3BB284B1259B2DEE004FEDDA /* BaseObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseObject.h; sourceTree = "<group>"; };
+		3BB284B2259B2DEE004FEDDA /* BaseObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseObject.m; sourceTree = "<group>"; };
+		3BB284C2259B676C004FEDDA /* ISSLocationWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ISSLocationWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		3BB284C4259B676C004FEDDA /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		3BB284C6259B676C004FEDDA /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		3BB284C9259B676C004FEDDA /* ISSLocationWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISSLocationWidget.swift; sourceTree = "<group>"; };
+		3BB284CB259B676C004FEDDA /* ISSLocationWidget.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = ISSLocationWidget.intentdefinition; sourceTree = "<group>"; };
+		3BB284CC259B676F004FEDDA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3BB284CE259B676F004FEDDA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3BB28476259978B8004FEDDA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3BB284BF259B676C004FEDDA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3BB284C7259B676C004FEDDA /* SwiftUI.framework in Frameworks */,
+				3BB284C5259B676C004FEDDA /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3BB28470259978B8004FEDDA = {
+			isa = PBXGroup;
+			children = (
+				3BB2847B259978B8004FEDDA /* ISSLocation */,
+				3BB284C8259B676C004FEDDA /* ISSLocationWidget */,
+				3BB284C3259B676C004FEDDA /* Frameworks */,
+				3BB2847A259978B8004FEDDA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3BB2847A259978B8004FEDDA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3BB28479259978B8004FEDDA /* ISSLocation.app */,
+				3BB284C2259B676C004FEDDA /* ISSLocationWidgetExtension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3BB2847B259978B8004FEDDA /* ISSLocation */ = {
+			isa = PBXGroup;
+			children = (
+				3BB2848D259978BB004FEDDA /* Info.plist */,
+				3BB284BC259B66D9004FEDDA /* App */,
+				3BB28488259978BB004FEDDA /* Assets.xcassets */,
+				3BB2849B25997944004FEDDA /* MainVC.h */,
+				3BB2849C25997944004FEDDA /* MainVC.m */,
+				3BB284BA259B66B7004FEDDA /* Models */,
+				3BB284B8259B6680004FEDDA /* Networking */,
+			);
+			path = ISSLocation;
+			sourceTree = "<group>";
+		};
+		3BB284B8259B6680004FEDDA /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				3BB284A6259B1F7E004FEDDA /* RestService.h */,
+				3BB284A5259B1F7E004FEDDA /* RestService.m */,
+				3BB284AD259B22C6004FEDDA /* ISSLocationFetchService.h */,
+				3BB284AE259B22C6004FEDDA /* ISSLocationFetchService.m */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		3BB284BA259B66B7004FEDDA /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				3BB284B1259B2DEE004FEDDA /* BaseObject.h */,
+				3BB284B2259B2DEE004FEDDA /* BaseObject.m */,
+				3BB284A9259B2061004FEDDA /* ISSLocation.h */,
+				3BB284AA259B2061004FEDDA /* ISSLocation.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		3BB284BC259B66D9004FEDDA /* App */ = {
+			isa = PBXGroup;
+			children = (
+				3BB2848A259978BB004FEDDA /* LaunchScreen.storyboard */,
+				3BB2848E259978BB004FEDDA /* main.m */,
+				3BB2847C259978B9004FEDDA /* AppDelegate.h */,
+				3BB2847D259978B9004FEDDA /* AppDelegate.m */,
+				3BB2847F259978B9004FEDDA /* SceneDelegate.h */,
+				3BB28480259978B9004FEDDA /* SceneDelegate.m */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		3BB284C3259B676C004FEDDA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3BB284C4259B676C004FEDDA /* WidgetKit.framework */,
+				3BB284C6259B676C004FEDDA /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3BB284C8259B676C004FEDDA /* ISSLocationWidget */ = {
+			isa = PBXGroup;
+			children = (
+				3BB284C9259B676C004FEDDA /* ISSLocationWidget.swift */,
+				3BB284CB259B676C004FEDDA /* ISSLocationWidget.intentdefinition */,
+				3BB284CC259B676F004FEDDA /* Assets.xcassets */,
+				3BB284CE259B676F004FEDDA /* Info.plist */,
+			);
+			path = ISSLocationWidget;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3BB28478259978B8004FEDDA /* ISSLocation */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3BB28492259978BB004FEDDA /* Build configuration list for PBXNativeTarget "ISSLocation" */;
+			buildPhases = (
+				3BB28475259978B8004FEDDA /* Sources */,
+				3BB28476259978B8004FEDDA /* Frameworks */,
+				3BB28477259978B8004FEDDA /* Resources */,
+				3BB284D7259B676F004FEDDA /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3BB284D2259B676F004FEDDA /* PBXTargetDependency */,
+			);
+			name = ISSLocation;
+			productName = ISSLocation;
+			productReference = 3BB28479259978B8004FEDDA /* ISSLocation.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3BB284C1259B676C004FEDDA /* ISSLocationWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3BB284D4259B676F004FEDDA /* Build configuration list for PBXNativeTarget "ISSLocationWidgetExtension" */;
+			buildPhases = (
+				3BB284BE259B676C004FEDDA /* Sources */,
+				3BB284BF259B676C004FEDDA /* Frameworks */,
+				3BB284C0259B676C004FEDDA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ISSLocationWidgetExtension;
+			productName = ISSLocationWidgetExtension;
+			productReference = 3BB284C2259B676C004FEDDA /* ISSLocationWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3BB28471259978B8004FEDDA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1230;
+				LastUpgradeCheck = 1230;
+				TargetAttributes = {
+					3BB28478259978B8004FEDDA = {
+						CreatedOnToolsVersion = 12.3;
+					};
+					3BB284C1259B676C004FEDDA = {
+						CreatedOnToolsVersion = 12.3;
+					};
+				};
+			};
+			buildConfigurationList = 3BB28474259978B8004FEDDA /* Build configuration list for PBXProject "ISSLocation" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3BB28470259978B8004FEDDA;
+			productRefGroup = 3BB2847A259978B8004FEDDA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3BB28478259978B8004FEDDA /* ISSLocation */,
+				3BB284C1259B676C004FEDDA /* ISSLocationWidgetExtension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3BB28477259978B8004FEDDA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3BB2848C259978BB004FEDDA /* LaunchScreen.storyboard in Resources */,
+				3BB28489259978BB004FEDDA /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3BB284C0259B676C004FEDDA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3BB284CD259B676F004FEDDA /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3BB28475259978B8004FEDDA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3BB2847E259978B9004FEDDA /* AppDelegate.m in Sources */,
+				3BB284B3259B2DEE004FEDDA /* BaseObject.m in Sources */,
+				3BB284AF259B22C6004FEDDA /* ISSLocationFetchService.m in Sources */,
+				3BB284A7259B1F7E004FEDDA /* RestService.m in Sources */,
+				3BB284AB259B2061004FEDDA /* ISSLocation.m in Sources */,
+				3BB2849D25997944004FEDDA /* MainVC.m in Sources */,
+				3BB284D0259B676F004FEDDA /* ISSLocationWidget.intentdefinition in Sources */,
+				3BB2848F259978BB004FEDDA /* main.m in Sources */,
+				3BB28481259978B9004FEDDA /* SceneDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3BB284BE259B676C004FEDDA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3BB284CA259B676C004FEDDA /* ISSLocationWidget.swift in Sources */,
+				3BB284CF259B676F004FEDDA /* ISSLocationWidget.intentdefinition in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3BB284D2259B676F004FEDDA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3BB284C1259B676C004FEDDA /* ISSLocationWidgetExtension */;
+			targetProxy = 3BB284D1259B676F004FEDDA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3BB2848A259978BB004FEDDA /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3BB2848B259978BB004FEDDA /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3BB28490259978BB004FEDDA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		3BB28491259978BB004FEDDA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3BB28493259978BB004FEDDA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2473KE85XF;
+				INFOPLIST_FILE = ISSLocation/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.bluepego.ISSLocation;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3BB28494259978BB004FEDDA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2473KE85XF;
+				INFOPLIST_FILE = ISSLocation/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.bluepego.ISSLocation;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		3BB284D5259B676F004FEDDA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2473KE85XF;
+				INFOPLIST_FILE = ISSLocationWidget/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.bluepego.ISSLocation.ISSLocationWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3BB284D6259B676F004FEDDA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2473KE85XF;
+				INFOPLIST_FILE = ISSLocationWidget/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.bluepego.ISSLocation.ISSLocationWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3BB28474259978B8004FEDDA /* Build configuration list for PBXProject "ISSLocation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3BB28490259978BB004FEDDA /* Debug */,
+				3BB28491259978BB004FEDDA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3BB28492259978BB004FEDDA /* Build configuration list for PBXNativeTarget "ISSLocation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3BB28493259978BB004FEDDA /* Debug */,
+				3BB28494259978BB004FEDDA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3BB284D4259B676F004FEDDA /* Build configuration list for PBXNativeTarget "ISSLocationWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3BB284D5259B676F004FEDDA /* Debug */,
+				3BB284D6259B676F004FEDDA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3BB28471259978B8004FEDDA /* Project object */;
+}

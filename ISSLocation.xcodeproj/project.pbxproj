@@ -17,22 +17,20 @@
 		3BB284AB259B2061004FEDDA /* ISSLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BB284AA259B2061004FEDDA /* ISSLocation.m */; };
 		3BB284AF259B22C6004FEDDA /* ISSLocationFetchService.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BB284AE259B22C6004FEDDA /* ISSLocationFetchService.m */; };
 		3BB284B3259B2DEE004FEDDA /* BaseObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BB284B2259B2DEE004FEDDA /* BaseObject.m */; };
-		3BB284C5259B676C004FEDDA /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BB284C4259B676C004FEDDA /* WidgetKit.framework */; };
-		3BB284C7259B676C004FEDDA /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BB284C6259B676C004FEDDA /* SwiftUI.framework */; };
-		3BB284CA259B676C004FEDDA /* ISSLocationWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB284C9259B676C004FEDDA /* ISSLocationWidget.swift */; };
-		3BB284CD259B676F004FEDDA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BB284CC259B676F004FEDDA /* Assets.xcassets */; };
-		3BB284CF259B676F004FEDDA /* ISSLocationWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 3BB284CB259B676C004FEDDA /* ISSLocationWidget.intentdefinition */; };
-		3BB284D0259B676F004FEDDA /* ISSLocationWidget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 3BB284CB259B676C004FEDDA /* ISSLocationWidget.intentdefinition */; };
-		3BB284D3259B676F004FEDDA /* ISSLocationWidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 3BB284C2259B676C004FEDDA /* ISSLocationWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		3BB28519259B7AF5004FEDDA /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BB284C4259B676C004FEDDA /* WidgetKit.framework */; };
+		3BB2851A259B7AF5004FEDDA /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BB284C6259B676C004FEDDA /* SwiftUI.framework */; };
+		3BB2851D259B7AF5004FEDDA /* LocationWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BB2851C259B7AF5004FEDDA /* LocationWidget.swift */; };
+		3BB2851F259B7AF8004FEDDA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3BB2851E259B7AF8004FEDDA /* Assets.xcassets */; };
+		3BB28523259B7AF8004FEDDA /* LocationWidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 3BB28518259B7AF5004FEDDA /* LocationWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		3BB284D1259B676F004FEDDA /* PBXContainerItemProxy */ = {
+		3BB28521259B7AF8004FEDDA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 3BB28471259978B8004FEDDA /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 3BB284C1259B676C004FEDDA;
-			remoteInfo = ISSLocationWidgetExtension;
+			remoteGlobalIDString = 3BB28517259B7AF5004FEDDA;
+			remoteInfo = LocationWidgetExtension;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -43,7 +41,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				3BB284D3259B676F004FEDDA /* ISSLocationWidgetExtension.appex in Embed App Extensions */,
+				3BB28523259B7AF8004FEDDA /* LocationWidgetExtension.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -70,13 +68,14 @@
 		3BB284AE259B22C6004FEDDA /* ISSLocationFetchService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ISSLocationFetchService.m; sourceTree = "<group>"; };
 		3BB284B1259B2DEE004FEDDA /* BaseObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseObject.h; sourceTree = "<group>"; };
 		3BB284B2259B2DEE004FEDDA /* BaseObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseObject.m; sourceTree = "<group>"; };
-		3BB284C2259B676C004FEDDA /* ISSLocationWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ISSLocationWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		3BB284C4259B676C004FEDDA /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		3BB284C6259B676C004FEDDA /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
-		3BB284C9259B676C004FEDDA /* ISSLocationWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISSLocationWidget.swift; sourceTree = "<group>"; };
-		3BB284CB259B676C004FEDDA /* ISSLocationWidget.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = ISSLocationWidget.intentdefinition; sourceTree = "<group>"; };
-		3BB284CC259B676F004FEDDA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		3BB284CE259B676F004FEDDA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3BB28518259B7AF5004FEDDA /* LocationWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = LocationWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		3BB2851C259B7AF5004FEDDA /* LocationWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationWidget.swift; sourceTree = "<group>"; };
+		3BB2851E259B7AF8004FEDDA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3BB28520259B7AF8004FEDDA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3BB28529259C5B13004FEDDA /* ISSLocation.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ISSLocation.entitlements; sourceTree = "<group>"; };
+		3BB2852E259C5F60004FEDDA /* LocationWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LocationWidgetExtension.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,12 +86,12 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3BB284BF259B676C004FEDDA /* Frameworks */ = {
+		3BB28515259B7AF5004FEDDA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3BB284C7259B676C004FEDDA /* SwiftUI.framework in Frameworks */,
-				3BB284C5259B676C004FEDDA /* WidgetKit.framework in Frameworks */,
+				3BB2851A259B7AF5004FEDDA /* SwiftUI.framework in Frameworks */,
+				3BB28519259B7AF5004FEDDA /* WidgetKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,8 +101,9 @@
 		3BB28470259978B8004FEDDA = {
 			isa = PBXGroup;
 			children = (
+				3BB2852E259C5F60004FEDDA /* LocationWidgetExtension.entitlements */,
 				3BB2847B259978B8004FEDDA /* ISSLocation */,
-				3BB284C8259B676C004FEDDA /* ISSLocationWidget */,
+				3BB2851B259B7AF5004FEDDA /* LocationWidget */,
 				3BB284C3259B676C004FEDDA /* Frameworks */,
 				3BB2847A259978B8004FEDDA /* Products */,
 			);
@@ -113,7 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				3BB28479259978B8004FEDDA /* ISSLocation.app */,
-				3BB284C2259B676C004FEDDA /* ISSLocationWidgetExtension.appex */,
+				3BB28518259B7AF5004FEDDA /* LocationWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -121,6 +121,7 @@
 		3BB2847B259978B8004FEDDA /* ISSLocation */ = {
 			isa = PBXGroup;
 			children = (
+				3BB28529259C5B13004FEDDA /* ISSLocation.entitlements */,
 				3BB2848D259978BB004FEDDA /* Info.plist */,
 				3BB284BC259B66D9004FEDDA /* App */,
 				3BB28488259978BB004FEDDA /* Assets.xcassets */,
@@ -176,15 +177,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		3BB284C8259B676C004FEDDA /* ISSLocationWidget */ = {
+		3BB2851B259B7AF5004FEDDA /* LocationWidget */ = {
 			isa = PBXGroup;
 			children = (
-				3BB284C9259B676C004FEDDA /* ISSLocationWidget.swift */,
-				3BB284CB259B676C004FEDDA /* ISSLocationWidget.intentdefinition */,
-				3BB284CC259B676F004FEDDA /* Assets.xcassets */,
-				3BB284CE259B676F004FEDDA /* Info.plist */,
+				3BB2851C259B7AF5004FEDDA /* LocationWidget.swift */,
+				3BB2851E259B7AF8004FEDDA /* Assets.xcassets */,
+				3BB28520259B7AF8004FEDDA /* Info.plist */,
 			);
-			path = ISSLocationWidget;
+			path = LocationWidget;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -202,28 +202,28 @@
 			buildRules = (
 			);
 			dependencies = (
-				3BB284D2259B676F004FEDDA /* PBXTargetDependency */,
+				3BB28522259B7AF8004FEDDA /* PBXTargetDependency */,
 			);
 			name = ISSLocation;
 			productName = ISSLocation;
 			productReference = 3BB28479259978B8004FEDDA /* ISSLocation.app */;
 			productType = "com.apple.product-type.application";
 		};
-		3BB284C1259B676C004FEDDA /* ISSLocationWidgetExtension */ = {
+		3BB28517259B7AF5004FEDDA /* LocationWidgetExtension */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3BB284D4259B676F004FEDDA /* Build configuration list for PBXNativeTarget "ISSLocationWidgetExtension" */;
+			buildConfigurationList = 3BB28524259B7AF8004FEDDA /* Build configuration list for PBXNativeTarget "LocationWidgetExtension" */;
 			buildPhases = (
-				3BB284BE259B676C004FEDDA /* Sources */,
-				3BB284BF259B676C004FEDDA /* Frameworks */,
-				3BB284C0259B676C004FEDDA /* Resources */,
+				3BB28514259B7AF5004FEDDA /* Sources */,
+				3BB28515259B7AF5004FEDDA /* Frameworks */,
+				3BB28516259B7AF5004FEDDA /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = ISSLocationWidgetExtension;
-			productName = ISSLocationWidgetExtension;
-			productReference = 3BB284C2259B676C004FEDDA /* ISSLocationWidgetExtension.appex */;
+			name = LocationWidgetExtension;
+			productName = LocationWidgetExtension;
+			productReference = 3BB28518259B7AF5004FEDDA /* LocationWidgetExtension.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
@@ -238,7 +238,7 @@
 					3BB28478259978B8004FEDDA = {
 						CreatedOnToolsVersion = 12.3;
 					};
-					3BB284C1259B676C004FEDDA = {
+					3BB28517259B7AF5004FEDDA = {
 						CreatedOnToolsVersion = 12.3;
 					};
 				};
@@ -257,7 +257,7 @@
 			projectRoot = "";
 			targets = (
 				3BB28478259978B8004FEDDA /* ISSLocation */,
-				3BB284C1259B676C004FEDDA /* ISSLocationWidgetExtension */,
+				3BB28517259B7AF5004FEDDA /* LocationWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -272,11 +272,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3BB284C0259B676C004FEDDA /* Resources */ = {
+		3BB28516259B7AF5004FEDDA /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3BB284CD259B676F004FEDDA /* Assets.xcassets in Resources */,
+				3BB2851F259B7AF8004FEDDA /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,28 +293,26 @@
 				3BB284A7259B1F7E004FEDDA /* RestService.m in Sources */,
 				3BB284AB259B2061004FEDDA /* ISSLocation.m in Sources */,
 				3BB2849D25997944004FEDDA /* MainVC.m in Sources */,
-				3BB284D0259B676F004FEDDA /* ISSLocationWidget.intentdefinition in Sources */,
 				3BB2848F259978BB004FEDDA /* main.m in Sources */,
 				3BB28481259978B9004FEDDA /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3BB284BE259B676C004FEDDA /* Sources */ = {
+		3BB28514259B7AF5004FEDDA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3BB284CA259B676C004FEDDA /* ISSLocationWidget.swift in Sources */,
-				3BB284CF259B676F004FEDDA /* ISSLocationWidget.intentdefinition in Sources */,
+				3BB2851D259B7AF5004FEDDA /* LocationWidget.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		3BB284D2259B676F004FEDDA /* PBXTargetDependency */ = {
+		3BB28522259B7AF8004FEDDA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 3BB284C1259B676C004FEDDA /* ISSLocationWidgetExtension */;
-			targetProxy = 3BB284D1259B676F004FEDDA /* PBXContainerItemProxy */;
+			target = 3BB28517259B7AF5004FEDDA /* LocationWidgetExtension */;
+			targetProxy = 3BB28521259B7AF8004FEDDA /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -448,6 +446,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = ISSLocation/ISSLocation.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2473KE85XF;
 				INFOPLIST_FILE = ISSLocation/Info.plist;
@@ -467,6 +466,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = ISSLocation/ISSLocation.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2473KE85XF;
 				INFOPLIST_FILE = ISSLocation/Info.plist;
@@ -480,20 +480,21 @@
 			};
 			name = Release;
 		};
-		3BB284D5259B676F004FEDDA /* Debug */ = {
+		3BB28525259B7AF8004FEDDA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = LocationWidgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2473KE85XF;
-				INFOPLIST_FILE = ISSLocationWidget/Info.plist;
+				INFOPLIST_FILE = LocationWidget/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.bluepego.ISSLocation.ISSLocationWidget;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bluepego.ISSLocation.LocationWidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
@@ -503,20 +504,21 @@
 			};
 			name = Debug;
 		};
-		3BB284D6259B676F004FEDDA /* Release */ = {
+		3BB28526259B7AF8004FEDDA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = LocationWidgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2473KE85XF;
-				INFOPLIST_FILE = ISSLocationWidget/Info.plist;
+				INFOPLIST_FILE = LocationWidget/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@executable_path/../../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.bluepego.ISSLocation.ISSLocationWidget;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bluepego.ISSLocation.LocationWidget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -547,11 +549,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3BB284D4259B676F004FEDDA /* Build configuration list for PBXNativeTarget "ISSLocationWidgetExtension" */ = {
+		3BB28524259B7AF8004FEDDA /* Build configuration list for PBXNativeTarget "LocationWidgetExtension" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3BB284D5259B676F004FEDDA /* Debug */,
-				3BB284D6259B676F004FEDDA /* Release */,
+				3BB28525259B7AF8004FEDDA /* Debug */,
+				3BB28526259B7AF8004FEDDA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

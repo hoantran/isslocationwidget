@@ -17,6 +17,7 @@ static NSString *issReuseIdentifier = @"ISS_PIN";
 @property (nonatomic, strong) MKPointAnnotation *issAnnotation;
 @property (nonatomic, strong) ISSLocationFetchService *issLocationService;
 @property (nonatomic, strong) UILabel *lastUpdateLabel;
+@property (nonatomic, strong) NSUserDefaults *userDefaults;
 @end
 
 @implementation MainVC
@@ -26,6 +27,8 @@ static NSString *issReuseIdentifier = @"ISS_PIN";
     
     self.title = @"ISS Location";
     self.view.backgroundColor = [UIColor cyanColor];
+    
+    self.userDefaults = [[NSUserDefaults alloc] initWithSuiteName:@"group.com.bluepego.ISSLocation"];
     
     [self createMapView];
     [self createLastUpdateLabel];
@@ -97,20 +100,28 @@ static NSString *issReuseIdentifier = @"ISS_PIN";
 - (void)setupLocationUpdate {
     self.issLocationService = [[ISSLocationFetchService alloc]init];
     
-    [NSTimer scheduledTimerWithTimeInterval:5.0
-                                     target:self
-                                   selector:@selector(fetchISSLocation:)
-                                   userInfo:nil
-                                    repeats:YES];
+    NSTimer *timer = [NSTimer scheduledTimerWithTimeInterval:10.0
+                                                      target:self
+                                                    selector:@selector(fetchISSLocation:)
+                                                    userInfo:nil
+                                                     repeats:YES];
+    [timer fire];
 }
 
 - (void)fetchISSLocation:(NSTimer *)timer {
     [self.issLocationService fetchISSLocation:^(ISSLocation * _Nonnull location) {
         NSLog(@"[%lu] for [%@]", (unsigned long)location.unixTimeStamp, location.dateString);
         [self setCenter:location];
+        [self transmitLocation:location];
     } failure:^(NSString * _Nonnull errorMessage) {
         NSLog(@"%@", errorMessage);
     }];
+}
+
+- (void)transmitLocation:(ISSLocation *)location {
+    [self.userDefaults setDouble:location.latitude forKey:@"LATITUDE"];
+    [self.userDefaults setDouble:location.longitude forKey:@"LONGITUDE"];
+    
 }
 
 - (void)setCenter:(ISSLocation *)location {

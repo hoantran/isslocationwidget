@@ -15,7 +15,7 @@ static NSDateFormatter *DATE_FORMATTER;
     self = [super init];
     if (self) {
         self.message = @"";
-        self.unixTimeStamp = 0;
+        self.timestamp = 0;
         self.longitude = 0;
         self.latitude = 0;
         
@@ -29,9 +29,7 @@ static NSDateFormatter *DATE_FORMATTER;
 }
 
 - (void)setValue:(id)value forKey:(NSString *)key {
-    if ([key isEqualToString:@"timestamp"]) {
-        self.unixTimeStamp = (NSUInteger)[value integerValue];
-    } else if ([key isEqualToString:@"iss_position"]) {
+    if ([key isEqualToString:@"iss_position"]) {
         [self updateValues:(NSDictionary *)value];
     } else {
         [super setValue:value forKey:key];
@@ -49,7 +47,7 @@ static NSDateFormatter *DATE_FORMATTER;
 }
 
 - (NSDate *)date {
-    return [NSDate dateWithTimeIntervalSince1970:self.unixTimeStamp];
+    return [NSDate dateWithTimeIntervalSince1970:self.timestamp];
 }
 
 - (NSString *)dateString {

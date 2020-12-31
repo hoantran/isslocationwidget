@@ -9,6 +9,7 @@
 #import <MapKit/MapKit.h>
 #import "ISSLocationFetchService.h"
 #import "ISSLocation.h"
+#import "ISSLocation-Swift.h"
 
 static NSString *issReuseIdentifier = @"ISS_PIN";
 
@@ -110,7 +111,7 @@ static NSString *issReuseIdentifier = @"ISS_PIN";
 
 - (void)fetchISSLocation:(NSTimer *)timer {
     [self.issLocationService fetchISSLocation:^(ISSLocation * _Nonnull location) {
-        NSLog(@"[%lu] for [%@]", (unsigned long)location.unixTimeStamp, location.dateString);
+        NSLog(@"[%@] [%f, %f]", location.dateString, location.latitude, location.longitude);
         [self setCenter:location];
         [self transmitLocation:location];
     } failure:^(NSString * _Nonnull errorMessage) {
@@ -119,9 +120,15 @@ static NSString *issReuseIdentifier = @"ISS_PIN";
 }
 
 - (void)transmitLocation:(ISSLocation *)location {
-    [self.userDefaults setDouble:location.latitude forKey:@"LATITUDE"];
-    [self.userDefaults setDouble:location.longitude forKey:@"LONGITUDE"];
+    ISSPosition *position = [[ISSPosition alloc]init];
+    position.timestamp = location.timestamp;
+    position.latitude = location.latitude;
+    position.longitude = location.longitude;
+    if (position) {
+        [self.userDefaults setObject:[position jsonEncode] forKey:@"POSITION"];
+    }
     
+    [WidgetKitHelper reloadLocationWidget];
 }
 
 - (void)setCenter:(ISSLocation *)location {

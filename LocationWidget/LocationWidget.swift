@@ -16,8 +16,7 @@ struct LocationEntry: TimelineEntry {
 }
 
 struct Provider: TimelineProvider {
-    @AppStorage("LATITUDE", store: UserDefaults(suiteName: "group.com.bluepego.ISSLocation")) var latitude:Double = 1
-    @AppStorage("LONGITUDE", store: UserDefaults(suiteName: "group.com.bluepego.ISSLocation")) var longitude:Double = 1
+    @AppStorage("POSITION", store: UserDefaults(suiteName: "group.com.bluepego.ISSLocation")) var positionData = Data()
     
     func placeholder(in context: Context) -> LocationEntry {
         return LocationEntry(date: Date(), currentTime: "current time", latitude: 3.0, longitude: 10.0)
@@ -29,19 +28,31 @@ struct Provider: TimelineProvider {
     }
     
     func getTimeline(in context: Context, completion: @escaping (Timeline<LocationEntry>) -> ()) {
-        let date = Date()
-        let formatter = DateFormatter()
-        formatter.dateFormat = "hh:mm:ss a"
-        let time = formatter.string(from: date)
-        let entryData = LocationEntry(date: date, currentTime: time, latitude:latitude, longitude:longitude)
-        
-        let refresh = Calendar.current.date(byAdding: .second, value: 10, to: date)!
-        
-        let timeLine = Timeline(entries: [entryData], policy: .after(refresh))
+        let locationEntry = decodeLocation()
+        let refresh = Calendar.current.date(byAdding: .second, value: 10, to: locationEntry.date)!
+        let timeLine = Timeline(entries: [locationEntry.entry], policy: .after(refresh))
 //        #if DEBUG
             NSLog("%@", "Updated")
 //        #endif
         completion(timeLine)
+    }
+    
+    func decodeLocation() -> (entry: LocationEntry, date: Date) {
+        var entry: LocationEntry
+        var date: Date
+        let formatter = DateFormatter()
+        formatter.dateFormat = "hh:mm:ss a"
+
+        if let location = try? JSONDecoder().decode(ISSPosition.self, from: positionData) {
+            date = Date(timeIntervalSince1970: location.timestamp)
+            let time = formatter.string(from: date)
+            entry = LocationEntry(date: date, currentTime: time, latitude:location.latitude, longitude:location.longitude)
+        } else {
+            date = Date()
+            let time = formatter.string(from: date)
+            entry = LocationEntry(date: date, currentTime: time, latitude:5, longitude:19)
+        }
+        return (entry, date)
     }
 }
 

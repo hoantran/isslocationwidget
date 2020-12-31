@@ -12,7 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface ISSLocation : BaseObject
 @property (nonatomic, strong) NSString *message;
-@property (nonatomic, assign) NSUInteger unixTimeStamp;
+@property (nonatomic, assign) double timestamp;
 @property (nonatomic, assign) double latitude;
 @property (nonatomic, assign) double longitude;
 @property (nonatomic, readonly) CLLocationCoordinate2D coordinate;
